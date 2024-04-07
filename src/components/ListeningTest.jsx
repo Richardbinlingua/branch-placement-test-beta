@@ -28,7 +28,7 @@ const ListeningTest = ({ testData, setTestState }) => {
             {item.question}
             {item.allAnswers.map((answer) => (
               <button
-                className='m-2 border-2 border-purple-800 px-3 py-2 w-[160px] rounded-md'
+                className='m-2 border-2 border-purple-800 px-3 py-2 w-[150px] rounded-md'
                 key={answer}
                 // onClick={(e) => console.log(e.target.innerHTML)}
                 // onClick={() => console.log(index)}
