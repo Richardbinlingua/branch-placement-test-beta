@@ -72,7 +72,7 @@ const ListeningTest = ({
       <div className='flex flex-col justify-center items-center text-center'>
         <button
           onClick={play}
-          className='bg-blue-800 text-white rounded-md py-2 px-10 my-5'
+          className='bg-blue-800 text-white rounded-md py-3 px-10 my-5'
         >
           Start Listening
         </button>
@@ -97,7 +97,7 @@ const ListeningTest = ({
           ))}
         </div>
         <button
-          className='bg-purple-800 text-white rounded-md py-2 px-10 my-8'
+          className='bg-purple-800 text-white rounded-md py-3 px-10 my-8'
           onClick={() => {
             setTestState({ listening: false, grammar: true, end: false })
             pause()
