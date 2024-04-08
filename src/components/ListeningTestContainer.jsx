@@ -1,7 +1,11 @@
 import useGetDoc from '../hooks/useGetDoc'
 import ListeningTest from './ListeningTest'
 
-const ListeningTestContainer = ({ setTestState }) => {
+const ListeningTestContainer = ({
+  setTestState,
+  listeningScore,
+  setListeningScore,
+}) => {
   const test = useGetDoc('PiPREa915KSlrqYX6PjK')
   // console.log(test)
 
@@ -14,7 +18,12 @@ const ListeningTestContainer = ({ setTestState }) => {
     contents = <p>No quiz found</p>
   } else {
     contents = (
-      <ListeningTest testData={test.data} setTestState={setTestState} />
+      <ListeningTest
+        testData={test.data}
+        setTestState={setTestState}
+        listeningScore={listeningScore}
+        setListeningScore={setListeningScore}
+      />
     )
   }
 

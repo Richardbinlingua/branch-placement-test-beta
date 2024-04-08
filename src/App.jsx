@@ -11,13 +11,31 @@ function App() {
     end: false,
   })
 
+  const [listeningScore, setListeningScore] = useState(0)
+  const [grammarScore, setGrammarScore] = useState(0)
+
   let pageContent
 
   if (testState.listening)
-    pageContent = <ListeningTestContainer setTestState={setTestState} />
+    pageContent = (
+      <ListeningTestContainer
+        setTestState={setTestState}
+        listeningScore={listeningScore}
+        setListeningScore={setListeningScore}
+      />
+    )
   if (testState.grammar)
-    pageContent = <GrammarTestContainer setTestState={setTestState} />
-  if (testState.end) pageContent = <EndScreen />
+    pageContent = (
+      <GrammarTestContainer
+        setTestState={setTestState}
+        grammarScore={grammarScore}
+        setGrammarScore={setGrammarScore}
+      />
+    )
+  if (testState.end)
+    pageContent = (
+      <EndScreen listeningScore={listeningScore} grammarScore={grammarScore} />
+    )
 
   return (
     <>
