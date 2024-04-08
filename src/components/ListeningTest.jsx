@@ -9,9 +9,10 @@ const ListeningTest = ({ testData, setTestState }) => {
   // console.log(testData.listeningQuestions)
 
   const handleClick = (e, index) => {
-    // console.log(index)
+    console.log(index)
     // console.log(e)
     // console.log(questions[index].correctAnswer)
+    // event.target.style.backgroundColor = '#6B21A8'
     if (e === questions[index].correctAnswer) {
       setScore(score + 1)
     }
