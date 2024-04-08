@@ -1,7 +1,11 @@
 import useGetDoc from '../hooks/useGetDoc'
 import GrammarTest from './GrammarTest'
 
-const GrammarTestContainer = ({ setTestState }) => {
+const GrammarTestContainer = ({
+  setTestState,
+  grammarScore,
+  setGrammarScore,
+}) => {
   const test = useGetDoc('lbbPfbHdl93AZ3CFlagT')
   // console.log(test)
 
@@ -13,7 +17,14 @@ const GrammarTestContainer = ({ setTestState }) => {
   } else if (!test.exists) {
     contents = <p>No quiz found</p>
   } else {
-    contents = <GrammarTest testData={test.data} setTestState={setTestState} />
+    contents = (
+      <GrammarTest
+        testData={test.data}
+        setTestState={setTestState}
+        grammarScore={grammarScore}
+        setGrammarScore={setGrammarScore}
+      />
+    )
   }
 
   return <div>{contents}</div>
