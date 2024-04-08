@@ -1,7 +1,11 @@
 import { useState } from 'react'
 
-const GrammarTest = ({ testData, setTestState }) => {
-  const [score, setScore] = useState(0)
+const GrammarTest = ({
+  testData,
+  setTestState,
+  grammarScore,
+  setGrammarScore,
+}) => {
   const [questionIndex, setQuestionIndex] = useState(0)
 
   const questions = testData.grammarQuestions ?? []
@@ -18,7 +22,7 @@ const GrammarTest = ({ testData, setTestState }) => {
 
   const onAnswerSelected = (correct) => {
     if (correct) {
-      setScore(score + 1)
+      setGrammarScore(grammarScore + 1)
     }
   }
 
@@ -32,23 +36,25 @@ const GrammarTest = ({ testData, setTestState }) => {
 
   const nextQuestion = () => {
     if (questionIndex >= totalQuestions - 1) {
-      setTestState({ listening: false, grammar: false, end: true })
+      setTestState({ listening: false, grammar: true, end: false })
     } else {
       setQuestionIndex(questionIndex + 1)
     }
   }
 
+  // console.log(grammarScore)
+
   return (
     <>
       <h2 className='text-3xl my-5 text-center'>Grammar Placement Test</h2>
       <div className='flex flex-col justify-center items-center text-center'>
-        <p>
+        <p className='text-lg'>
           Question:{' '}
-          <span className='text-purple-800'>
+          <span className='text-purple-800 font-semibold'>
             {questionNumber} / {totalQuestions}
           </span>
         </p>
-        <h1 className='text-2xl my-6 w-3/4 md:w-1/2 lg:w-1/3'>{question}</h1>
+        <h1 className='text-xl my-6 w-3/4 md:w-1/2 lg:w-1/3'>{question}</h1>
 
         {allAnswers.map((answer) => (
           // return <button>{answer}</button>
@@ -63,7 +69,7 @@ const GrammarTest = ({ testData, setTestState }) => {
           </li>
         ))}
         <button
-          className='bg-purple-800 text-white rounded-md py-2 px-10 my-5'
+          className='bg-purple-800 text-white rounded-md py-2 px-10 my-8'
           onClick={() =>
             setTestState({ listening: false, grammar: false, end: true })
           }
