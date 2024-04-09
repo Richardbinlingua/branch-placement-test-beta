@@ -11,11 +11,11 @@ const GrammarTestContainer = ({
 
   let contents
   if (test.status === 'loading') {
-    contents = <p>Loading...</p>
+    contents = <p className='text-center mt-10'>Loading...</p>
   } else if (test.status === 'error') {
-    contents = <p>Error. Please try again</p>
+    contents = <p className='text-center mt-10'>Error. Please try again</p>
   } else if (!test.exists) {
-    contents = <p>No quiz found</p>
+    contents = <p className='text-center mt-10'>No quiz found</p>
   } else {
     contents = (
       <GrammarTest
