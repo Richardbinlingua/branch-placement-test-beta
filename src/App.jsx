@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Register from './components/Register'
 import ListeningTestContainer from './components/ListeningTestContainer'
 import GrammarTestContainer from './components/GrammarTestContainer'
 import Header from './components/Header'
@@ -6,7 +7,8 @@ import EndScreen from './components/EndScreen'
 
 function App() {
   const [testState, setTestState] = useState({
-    listening: true,
+    register: true,
+    listening: false,
     grammar: false,
     end: false,
   })
@@ -15,6 +17,8 @@ function App() {
   const [grammarScore, setGrammarScore] = useState(0)
 
   let pageContent
+
+  if (testState.register) pageContent = <Register setTestState={setTestState} />
 
   if (testState.listening)
     pageContent = (
