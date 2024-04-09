@@ -6,6 +6,7 @@ const ListeningTest = ({
   listeningScore,
   setListeningScore,
 }) => {
+  const [isClicked, setIsClicked] = useState(false)
   const [questionIndex, setQuestionIndex] = useState(0)
   const questions = testData.listeningQuestions ?? []
 
@@ -26,6 +27,7 @@ const ListeningTest = ({
   const play = () => {
     // console.log('play')
     audio.play()
+    setIsClicked(true)
   }
 
   const pause = () => {
@@ -72,7 +74,8 @@ const ListeningTest = ({
       <div className='flex flex-col justify-center items-center text-center'>
         <button
           onClick={play}
-          className='bg-blue-800 text-white rounded-md py-3 px-10 my-5'
+          className='bg-[#120052] text-white rounded-md py-3 px-28 my-5'
+          disabled={isClicked}
         >
           Start Listening
         </button>
@@ -99,8 +102,8 @@ const ListeningTest = ({
         <button
           className='bg-purple-800 text-white rounded-md py-3 px-10 my-8'
           onClick={() => {
-            setTestState({ listening: false, grammar: true, end: false })
             pause()
+            setTestState({ listening: false, grammar: true, end: false })
           }}
         >
           Submit
