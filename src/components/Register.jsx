@@ -17,7 +17,7 @@ const Register = ({ setTestState }) => {
 
   return (
     <div>
-      <h1 className='text-3xl font-bold text-center mt-10 mb-8'>
+      <h1 className='text-3xl font-semibold text-center mt-10 mb-8'>
         inlingua Placement Test
       </h1>
       <div className='flex justify-center'>
@@ -31,7 +31,7 @@ const Register = ({ setTestState }) => {
               type='text'
               onChange={(e) => setFirstName(e.target.value)}
               value={firstName}
-              className='border border-gray-400 rounded-sm mb-5 pl-2 text-md'
+              className='border border-gray-400 rounded-sm mb-4 pl-2 py-[1px] text-md'
             />
           </label>
           <label className='block m-2'>
@@ -43,7 +43,7 @@ const Register = ({ setTestState }) => {
               type='text'
               onChange={(e) => setLastName(e.target.value)}
               value={lastName}
-              className='border border-gray-400 rounded-sm mb-5 pl-2 text-md'
+              className='border border-gray-400 rounded-sm mb-4 pl-2 text-md py-[1px]'
             />
           </label>
           <label className='block m-2'>
@@ -51,7 +51,7 @@ const Register = ({ setTestState }) => {
               Branch
             </span>
             <select
-              className='border border-gray-400 rounded-sm mb-5 pl-2 w-full text-lg'
+              className='border border-gray-400 rounded-sm mb-4 pl-2 w-full text-lg'
               onChange={(e) => setBranch(e.target.value)}
               required
             >
@@ -63,7 +63,7 @@ const Register = ({ setTestState }) => {
             </select>
           </label>
           <div className='text-center'>
-            <button className='border rounded-md px-3 py-2 bg-blue-800 text-white mt-6'>
+            <button className='border rounded-md px-5 py-2 bg-blue-800 text-white mt-6'>
               Start Test
             </button>
           </div>
