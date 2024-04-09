@@ -6,7 +6,7 @@ const GrammarTestContainer = ({
   grammarScore,
   setGrammarScore,
 }) => {
-  const test = useGetDoc('lbbPfbHdl93AZ3CFlagT')
+  const test = useGetDoc('5qEDmzWOr4szjcezKpYV')
   // console.log(test)
 
   let contents
