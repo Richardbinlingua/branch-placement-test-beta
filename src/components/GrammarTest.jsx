@@ -50,7 +50,7 @@ const GrammarTest = ({
       <div className='flex flex-col justify-center items-center text-center'>
         <p className='text-lg'>
           Question:{' '}
-          <span className='text-purple-800 font-semibold'>
+          <span className='text-[#4054b2] font-semibold'>
             {questionNumber} / {totalQuestions}
           </span>
         </p>
@@ -62,14 +62,14 @@ const GrammarTest = ({
             <button
               onClick={onAnswerClick}
               // className='mb-4 w-3/4 md:w-1/2 lg:w-1/3 text-lg cursor-pointer hover:bg-slate-300  text-white bg-[#56a5eb] p-3 rounded-md'
-              className='border-2 border-purple-800 p-3 m-2 w-[300px] rounded-md'
+              className='border-2 border-[#4054b2] p-3 m-2 w-[300px] rounded-md'
             >
               {answer}
             </button>
           </li>
         ))}
         <button
-          className='bg-purple-800 text-white rounded-md py-3 px-10 my-8'
+          className='bg-[#4054b2] text-white rounded-md py-3 px-10 my-8'
           onClick={() =>
             setTestState({ listening: false, grammar: false, end: true })
           }

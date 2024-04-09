@@ -8,13 +8,13 @@ const EndScreen = ({ listeningScore, grammarScore }) => {
       <div className='text-center mt-10 text-xl'>
         <h1>
           Your Listening Score:{' '}
-          <span className='text-purple-800 font-bold'>
+          <span className='text-[#4054b2] font-bold'>
             {listeningScore} / 100
           </span>
         </h1>
         <h1>
           Your Grammar Score:{' '}
-          <span className='text-purple-800 font-bold'>{grammarScore} / 50</span>
+          <span className='text-[#4054b2] font-bold'>{grammarScore} / 50</span>
         </h1>
       </div>
     </div>
