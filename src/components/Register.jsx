@@ -56,14 +56,14 @@ const Register = ({ setTestState }) => {
               required
             >
               <option value=''>select branch</option>
+              <option value='Bangna'>Bangna</option>
               <option value='Esplanade'>Esplanade</option>
-              <option value='CTD'>Future Park</option>
-              <option value='CTD'>Fashion Island</option>
-              <option value='CTD'>Bangna</option>
+              <option value='Fashion'>Fashion Island</option>
+              <option value='Future'>Future Park</option>
             </select>
           </label>
           <div className='text-center'>
-            <button className='border rounded-md px-8 py-2 bg-blue-800 text-white mt-6'>
+            <button className='border rounded-md px-8 py-2 bg-[#4054b2] text-white mt-6'>
               Start Test
             </button>
           </div>
