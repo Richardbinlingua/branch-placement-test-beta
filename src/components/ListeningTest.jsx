@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 const ListeningTest = ({
   testData,
@@ -8,6 +8,8 @@ const ListeningTest = ({
 }) => {
   const [isClicked, setIsClicked] = useState(false)
   const [questionIndex, setQuestionIndex] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(false)
+
   const questions = testData.listeningQuestions ?? []
 
   // console.log(questions[5].correctAnswer)
@@ -22,18 +24,37 @@ const ListeningTest = ({
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const [showListenButton, setShowListenButton] = useState(true)
 
-  let audio = new Audio('/listening.mp3')
+  const soundtrack = useRef(new Audio('/listening.mp3'))
 
-  const play = () => {
-    // console.log('play')
-    audio.play()
-    setIsClicked(true)
+  useEffect(() => {
+    if (isPlaying) {
+      soundtrack.current.play()
+      setIsClicked(true)
+    } else {
+      soundtrack.current.pause()
+    }
+  }, [isPlaying])
+
+  const stop = () => {
+    soundtrack.current.pause()
+    setTestState({
+      register: false,
+      listening: false,
+      grammar: true,
+      end: false,
+    })
   }
 
-  const pause = () => {
-    // console.log('pause')
-    audio.pause()
-  }
+  // const play = () => {
+  //   // console.log('play')
+  //   audio.play()
+  //   setIsClicked(true)
+  // }
+
+  // const pause = () => {
+  //   // console.log('pause')
+  //   audio.pause()
+  // }
 
   // const handleClick = (e, index) => {
   //   console.log(index)
@@ -73,7 +94,8 @@ const ListeningTest = ({
       <h2 className='text-3xl my-5 text-center'>Listening Placement Test</h2>
       <div className='flex flex-col justify-center items-center text-center'>
         <button
-          onClick={play}
+          // onClick={play}
+          onClick={() => setIsPlaying(true)}
           className='bg-[#4054b2] text-white rounded-md py-3 px-28 my-5'
           disabled={isClicked}
         >
@@ -101,10 +123,11 @@ const ListeningTest = ({
         </div>
         <button
           className='bg-[#4054b2] text-white rounded-md py-3 px-10 my-8'
-          onClick={() => {
-            pause()
-            setTestState({ listening: false, grammar: true, end: false })
-          }}
+          // onClick={() => {
+          //   pause()
+          //   setTestState({ listening: false, grammar: true, end: false })
+          // }}
+          onClick={stop}
         >
           Submit
         </button>
