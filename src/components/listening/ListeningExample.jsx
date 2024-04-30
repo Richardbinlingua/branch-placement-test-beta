@@ -39,7 +39,7 @@ const ListeningExample = ({ setTestState }) => {
 
   return (
     <>
-      <h2 className='text-3xl my-7 text-center'>Listening Placement Test</h2>
+      <h2 className='text-3xl my-7 text-center'>Listening Test</h2>
       <div className='flex flex-col justify-center items-center text-center'>
         <p className='text-lg font-semibold'>
           Listen to the audio. Look at the example on the screen. You will hear

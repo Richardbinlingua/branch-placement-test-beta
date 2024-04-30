@@ -12,7 +12,7 @@ const GrammarExample = ({ setTestState }) => {
   return (
     <>
       <div className='flex flex-col justify-center items-center text-center'>
-        <h2 className='text-3xl my-7 text-center'>Grammar Placement Test</h2>
+        <h2 className='text-3xl my-7 text-center'>Grammar Test</h2>
 
         <p className='text-lg font-semibold'>
           Look at this example. The correct answer is clicked.
