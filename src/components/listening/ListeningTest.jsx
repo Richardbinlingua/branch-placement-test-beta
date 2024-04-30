@@ -8,7 +8,7 @@ const ListeningTest = ({
 }) => {
   const [isClicked, setIsClicked] = useState(false)
   const [questionIndex, setQuestionIndex] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true)
 
   const questions = testData.listeningQuestions ?? []
 
@@ -39,8 +39,10 @@ const ListeningTest = ({
     soundtrack.current.pause()
     setTestState({
       register: false,
+      listeningExample: false,
       listening: false,
-      grammar: true,
+      grammarExample: true,
+      grammar: false,
       end: false,
     })
   }
@@ -93,15 +95,15 @@ const ListeningTest = ({
     <>
       <h2 className='text-3xl my-5 text-center'>Listening Placement Test</h2>
       <div className='flex flex-col justify-center items-center text-center'>
-        <button
+        {/* <button
           // onClick={play}
           onClick={() => setIsPlaying(true)}
           className='bg-[#4054b2] text-white rounded-md py-3 px-28 my-5'
           disabled={isClicked}
         >
-          Start Listening
-        </button>
-        <p className='text-lg mb-3'>
+          Play
+        </button> */}
+        <p className='text-lg my-5'>
           Question:{' '}
           <span className='text-[#4054b2] font-semibold'>
             {questionNumber} / {totalQuestions}

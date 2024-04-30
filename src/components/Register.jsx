@@ -9,7 +9,9 @@ const Register = ({ setTestState }) => {
     e.preventDefault()
     setTestState({
       register: false,
-      listening: true,
+      listeningExample: true,
+      listening: false,
+      grammarExample: false,
       grammar: false,
       end: false,
     })
@@ -18,7 +20,7 @@ const Register = ({ setTestState }) => {
   return (
     <div>
       <h1 className='text-3xl font-semibold text-center mt-10 mb-8'>
-        inlingua Placement Test
+        Placement Test
       </h1>
       <div className='flex justify-center'>
         <form onSubmit={startTest}>
@@ -75,7 +77,7 @@ const Register = ({ setTestState }) => {
           </label>
           <div className='text-center'>
             <button className='border rounded-md px-8 py-2 bg-[#4054b2] text-white mt-6'>
-              Start Test
+              Register
             </button>
           </div>
         </form>

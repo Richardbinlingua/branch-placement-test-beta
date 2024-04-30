@@ -1,12 +1,12 @@
-import useGetDoc from '../hooks/useGetDoc'
-import GrammarTest from './GrammarTest'
+import useGetDoc from '../../hooks/useGetDoc'
+import ListeningTest from './ListeningTest'
 
-const GrammarTestContainer = ({
+const ListeningTestContainer = ({
   setTestState,
-  grammarScore,
-  setGrammarScore,
+  listeningScore,
+  setListeningScore,
 }) => {
-  const test = useGetDoc('5qEDmzWOr4szjcezKpYV')
+  const test = useGetDoc('v1H8NC177RRhUaOZHCE6')
   // console.log(test)
 
   let contents
@@ -18,11 +18,11 @@ const GrammarTestContainer = ({
     contents = <p className='text-center mt-10'>No quiz found</p>
   } else {
     contents = (
-      <GrammarTest
+      <ListeningTest
         testData={test.data}
         setTestState={setTestState}
-        grammarScore={grammarScore}
-        setGrammarScore={setGrammarScore}
+        listeningScore={listeningScore}
+        setListeningScore={setListeningScore}
       />
     )
   }
@@ -30,4 +30,4 @@ const GrammarTestContainer = ({
   return <div>{contents}</div>
 }
 
-export default GrammarTestContainer
+export default ListeningTestContainer

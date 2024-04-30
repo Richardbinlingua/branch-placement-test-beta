@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import Register from './components/Register'
-import ListeningTestContainer from './components/ListeningTestContainer'
-import GrammarTestContainer from './components/GrammarTestContainer'
+import ListeningTestContainer from './components/listening/ListeningTestContainer'
+import GrammarTestContainer from './components/grammar/GrammarTestContainer'
 import Header from './components/Header'
 import EndScreen from './components/EndScreen'
+import ListeningExample from './components/listening/ListeningExample'
+import GrammarExample from './components/grammar/GrammarExample'
 
 function App() {
   const [testState, setTestState] = useState({
     register: true,
+    listeningExample: false,
     listening: false,
+    grammarExample: false,
     grammar: false,
     end: false,
   })
@@ -20,6 +24,9 @@ function App() {
 
   if (testState.register) pageContent = <Register setTestState={setTestState} />
 
+  if (testState.listeningExample)
+    pageContent = <ListeningExample setTestState={setTestState} />
+
   if (testState.listening)
     pageContent = (
       <ListeningTestContainer
@@ -28,6 +35,10 @@ function App() {
         setListeningScore={setListeningScore}
       />
     )
+
+  if (testState.grammarExample)
+    pageContent = <GrammarExample setTestState={setTestState} />
+
   if (testState.grammar)
     pageContent = (
       <GrammarTestContainer
