@@ -12,12 +12,12 @@ const GrammarExample = ({ setTestState }) => {
   return (
     <>
       <div className='flex flex-col justify-center items-center text-center'>
-        <h2 className='text-3xl my-7 text-center'>Grammar Test</h2>
+        <h2 className='text-3xl my-5 text-center'>Grammar Test</h2>
 
         <p className='text-lg font-semibold'>
           Look at this example. The correct answer is clicked.
         </p>
-        <h1 className='text-2xl my-6 w-[350px] md:w-1/2 lg:w-1/3'>
+        <h1 className='text-2xl my-4 w-[350px] md:w-1/2 lg:w-1/3'>
           In warm climates people ______ sitting outside in the sun.
         </h1>
         <button
