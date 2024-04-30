@@ -93,7 +93,7 @@ const ListeningTest = ({
 
   return (
     <>
-      <h2 className='text-3xl my-5 text-center'>Listening Placement Test</h2>
+      <h2 className='text-3xl my-5 text-center'>Listening Test</h2>
       <div className='flex flex-col justify-center items-center text-center'>
         {/* <button
           // onClick={play}

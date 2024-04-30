@@ -46,7 +46,7 @@ const GrammarTest = ({
 
   return (
     <>
-      <h2 className='text-3xl my-5 text-center'>Grammar Placement Test</h2>
+      <h2 className='text-3xl my-5 text-center'>Grammar Test</h2>
       <div className='flex flex-col justify-center items-center text-center'>
         <p className='text-lg'>
           Question:{' '}
