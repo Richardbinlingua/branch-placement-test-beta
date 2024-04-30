@@ -74,7 +74,7 @@ const Register = ({ setTestState }) => {
             </select>
           </label>
           <div className='text-center'>
-            <button className='border rounded-md px-8 py-2 bg-[#4054b2] text-white mt-6 w-[300px]'>
+            <button className='border rounded-md px-8 py-3 bg-[#4054b2] text-white mt-6 w-[300px]'>
               Register
             </button>
           </div>

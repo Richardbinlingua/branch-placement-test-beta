@@ -1,7 +1,32 @@
-import GrammarExample from '../grammar/GrammarExample'
+import { useRef, useEffect, useState } from 'react'
 
 const ListeningExample = ({ setTestState }) => {
-  const onClick = () => {
+  // const onClick = () => {
+  //   setTestState({
+  //     register: false,
+  //     listeningExample: false,
+  //     listening: true,
+  //     grammarExample: false,
+  //     grammar: false,
+  //     end: false,
+  //   })
+  // }
+
+  const [isClicked, setIsClicked] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true)
+  const soundtrack = useRef(new Audio('/listeningExample.mp3'))
+
+  useEffect(() => {
+    if (isPlaying) {
+      soundtrack.current.play()
+      setIsClicked(true)
+    } else {
+      soundtrack.current.pause()
+    }
+  }, [isPlaying])
+
+  const stop = () => {
+    soundtrack.current.pause()
     setTestState({
       register: false,
       listeningExample: false,
@@ -12,27 +37,25 @@ const ListeningExample = ({ setTestState }) => {
     })
   }
 
-  const play = () => {}
-
   return (
     <>
       <h2 className='text-3xl my-5 text-center'>Listening Placement Test</h2>
       <div className='flex flex-col justify-center items-center text-center'>
         <p className='text-lg font-bold'>
-          Look at the example below. Listen. You will hear the example{' '}
-          <i>once</i> only.
+          Listen to the audio. Look at the example on the screen. You will hear
+          the example <i>once</i> only.
         </p>
         <p className='text-lg font-bold'>
           Decide which word you hear, "soap" or "soup"
         </p>
-        <p className='text-lg font-bold'>The correct answer has been clicked</p>
-        <button
+
+        {/* <button
           onClick={play}
           className='bg-[#4054b2] text-white rounded-md py-3 mt-8 mb-1 w-[150px]'
         >
           Play Example
-        </button>
-        <div className='flex mt-5'>
+        </button> */}
+        <div className='flex my-5'>
           <button
             className='border-2 border-[#4054b2] p-3 m-2 w-[150px] rounded-md'
             disabled
@@ -46,11 +69,14 @@ const ListeningExample = ({ setTestState }) => {
             soup
           </button>
         </div>
+        <p className='text-lg font-bold'>
+          The correct answer was 'soup', so 'soup' should be selected.
+        </p>
         <button
-          onClick={onClick}
-          className='bg-[#4054b2] text-white rounded-md py-3 my-12 w-[325px]'
+          onClick={stop}
+          className='bg-[#4054b2] text-white rounded-md py-3 my-12 w-[300px]'
         >
-          Start Listening Test
+          Start Test
         </button>
       </div>
     </>

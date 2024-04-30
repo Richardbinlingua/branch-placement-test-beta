@@ -22,7 +22,7 @@ const ListeningTest = ({
   const { question, correctAnswer, allAnswers } = testQuestion
 
   const [selectedAnswer, setSelectedAnswer] = useState(null)
-  const [showListenButton, setShowListenButton] = useState(true)
+  // const [showListenButton, setShowListenButton] = useState(true)
 
   const soundtrack = useRef(new Audio('/listening.mp3'))
 
