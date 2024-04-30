@@ -103,7 +103,7 @@ const ListeningTest = ({
         >
           Play
         </button> */}
-        <p className='text-lg my-5'>
+        <p className='text-lg mt-3 mb-5'>
           Question:{' '}
           <span className='text-[#4054b2] font-semibold'>
             {questionNumber} / {totalQuestions}
