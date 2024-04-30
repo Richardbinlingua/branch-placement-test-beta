@@ -35,17 +35,17 @@ const ListeningTest = ({
     }
   }, [isPlaying])
 
-  const stop = () => {
-    soundtrack.current.pause()
-    setTestState({
-      register: false,
-      listeningExample: false,
-      listening: false,
-      grammarExample: true,
-      grammar: false,
-      end: false,
-    })
-  }
+  // const stop = () => {
+  //   soundtrack.current.pause()
+  //   setTestState({
+  //     register: false,
+  //     listeningExample: false,
+  //     listening: false,
+  //     grammarExample: true,
+  //     grammar: false,
+  //     end: false,
+  //   })
+  // }
 
   // const play = () => {
   //   // console.log('play')
@@ -124,7 +124,7 @@ const ListeningTest = ({
             </li>
           ))}
         </div>
-        <button
+        {/* <button
           className='bg-[#4054b2] text-white rounded-md py-2 my-8 w-[300px]'
           // onClick={() => {
           //   pause()
@@ -133,7 +133,7 @@ const ListeningTest = ({
           onClick={stop}
         >
           Submit
-        </button>
+        </button> */}
       </div>
     </>
   )
