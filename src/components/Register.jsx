@@ -31,7 +31,7 @@ const Register = ({ setTestState }) => {
               type='text'
               onChange={(e) => setFirstName(e.target.value)}
               value={firstName}
-              className='border border-gray-400 rounded-sm mb-4 pl-2 py-[1px] text-md'
+              className='border border-gray-400 rounded-sm mb-4 pl-2 py-[1px] text-md w-[300px]'
             />
           </label>
           <label className='block m-2'>
@@ -43,7 +43,7 @@ const Register = ({ setTestState }) => {
               type='text'
               onChange={(e) => setLastName(e.target.value)}
               value={lastName}
-              className='border border-gray-400 rounded-sm mb-4 pl-2 text-md py-[1px]'
+              className='border border-gray-400 rounded-sm mb-4 pl-2 text-md py-[1px] w-[300px]'
             />
           </label>
           <label className='block m-2'>
@@ -51,7 +51,7 @@ const Register = ({ setTestState }) => {
               Branch
             </span>
             <select
-              className='border border-gray-400 rounded-sm mb-4 pl-2 w-full text-lg'
+              className='border border-gray-400 rounded-sm mb-4 pl-2 text-lg w-[300px]'
               onChange={(e) => setBranch(e.target.value)}
               required
             >
@@ -74,7 +74,7 @@ const Register = ({ setTestState }) => {
             </select>
           </label>
           <div className='text-center'>
-            <button className='border rounded-md px-8 py-2 bg-[#4054b2] text-white mt-6'>
+            <button className='border rounded-md px-8 py-2 bg-[#4054b2] text-white mt-6 w-[300px]'>
               Register
             </button>
           </div>

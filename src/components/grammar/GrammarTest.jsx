@@ -69,9 +69,17 @@ const GrammarTest = ({
           </li>
         ))}
         <button
-          className='bg-[#4054b2] text-white rounded-md py-3 px-10 my-8'
+          className='bg-[#4054b2] text-white rounded-md py-3 my-8
+          w-[300px]'
           onClick={() =>
-            setTestState({ listening: false, grammar: false, end: true })
+            setTestState({
+              register: false,
+              listeningExample: false,
+              listening: false,
+              grammarExample: false,
+              grammar: false,
+              end: true,
+            })
           }
         >
           Submit
