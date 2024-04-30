@@ -23,7 +23,7 @@ const Register = ({ setTestState }) => {
       <div className='flex justify-center'>
         <form onSubmit={startTest}>
           <label className='block m-2'>
-            <span className='block font-semibold text-left mb-1 text-md'>
+            <span className='block font-semibold text-left text-lg'>
               First name
             </span>
             <input
@@ -35,7 +35,7 @@ const Register = ({ setTestState }) => {
             />
           </label>
           <label className='block m-2'>
-            <span className='block font-semibold text-left mb-1 text-md'>
+            <span className='block font-semibold text-left text-lg'>
               Last Name
             </span>
             <input
@@ -47,7 +47,7 @@ const Register = ({ setTestState }) => {
             />
           </label>
           <label className='block m-2'>
-            <span className='block font-semibold text-left mb-1 text-md'>
+            <span className='block font-semibold text-left text-lg'>
               Branch
             </span>
             <select
