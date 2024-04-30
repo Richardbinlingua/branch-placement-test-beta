@@ -54,7 +54,9 @@ const GrammarTest = ({
             {questionNumber} / {totalQuestions}
           </span>
         </p>
-        <h1 className='text-2xl my-6 w-3/4 md:w-1/2 lg:w-1/3'>{question}</h1>
+        <h1 className='text-2xl my-6 w-[350px] md:w-1/2 lg:w-1/3'>
+          {question}
+        </h1>
 
         {allAnswers.map((answer) => (
           // return <button>{answer}</button>
