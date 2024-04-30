@@ -56,10 +56,21 @@ const Register = ({ setTestState }) => {
               required
             >
               <option value=''>select branch</option>
+              <option value='Bangkae'>Bangkae</option>
               <option value='Bangna'>Bangna</option>
+              <option value='Chaengwattana'>Chaengwattana</option>
               <option value='Esplanade'>Esplanade</option>
-              <option value='Fashion'>Fashion Island</option>
-              <option value='Future'>Future Park</option>
+              <option value='Fashion Island'>Fashion Island</option>
+              <option value='Future Park'>Future Park</option>
+              <option value='Hat Yai'>Hat Yai</option>
+              <option value='Korat'>Korat</option>
+              <option value='Pinklao'>Pinklao</option>
+              <option value='Rama 2'>Rama 2</option>
+              <option value='Rama 3'>Rama 3</option>
+              <option value='Seacon Square'>Seacon Square</option>
+              <option value='Siam Paragon'>Siam Paragon</option>
+              <option value='Udon Thani'>Udon Thani</option>
+              <option value='West Gate'>West Gate</option>
             </select>
           </label>
           <div className='text-center'>
