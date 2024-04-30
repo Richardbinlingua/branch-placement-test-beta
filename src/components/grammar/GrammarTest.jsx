@@ -36,12 +36,13 @@ const GrammarTest = ({
 
   const nextQuestion = () => {
     if (questionIndex >= totalQuestions - 1) {
-      setTestState({ listening: false, grammar: true, end: false })
+      setTestState({ end: true })
     } else {
       setQuestionIndex(questionIndex + 1)
     }
   }
-
+  // console.log(totalQuestions)
+  // console.log(questionIndex)
   // console.log(grammarScore)
 
   return (
@@ -70,7 +71,7 @@ const GrammarTest = ({
             </button>
           </li>
         ))}
-        <button
+        {/* <button
           className='bg-[#4054b2] text-white rounded-md py-2 my-8
           w-[300px]'
           onClick={() =>
@@ -85,7 +86,7 @@ const GrammarTest = ({
           }
         >
           Submit
-        </button>
+        </button> */}
       </div>
     </>
   )
