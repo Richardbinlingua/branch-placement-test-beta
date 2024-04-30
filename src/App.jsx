@@ -55,7 +55,7 @@ function App() {
   return (
     <>
       <Header />
-      <div>{pageContent}</div>
+      <div className='mx-4'>{pageContent}</div>
     </>
   )
 }

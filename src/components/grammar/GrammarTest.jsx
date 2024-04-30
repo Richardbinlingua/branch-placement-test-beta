@@ -69,7 +69,7 @@ const GrammarTest = ({
           </li>
         ))}
         <button
-          className='bg-[#4054b2] text-white rounded-md py-3 my-8
+          className='bg-[#4054b2] text-white rounded-md py-2 my-8
           w-[300px]'
           onClick={() =>
             setTestState({

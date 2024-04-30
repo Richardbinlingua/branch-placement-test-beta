@@ -11,9 +11,10 @@ const GrammarExample = ({ setTestState }) => {
   }
   return (
     <>
-      <h2 className='text-3xl my-5 text-center'>Grammar Placement Test</h2>
       <div className='flex flex-col justify-center items-center text-center'>
-        <p className='text-lg font-bold'>
+        <h2 className='text-3xl my-7 text-center'>Grammar Placement Test</h2>
+
+        <p className='text-lg font-semibold'>
           Look at this example. The correct answer is clicked.
         </p>
         <h1 className='text-2xl my-6 w-3/4 md:w-1/2 lg:w-1/3'>
@@ -40,7 +41,7 @@ const GrammarExample = ({ setTestState }) => {
 
         <button
           onClick={onClick}
-          className='bg-[#4054b2] text-white rounded-md py-3 w-[300px] my-12'
+          className='bg-[#4054b2] text-white rounded-md py-2 w-[300px] my-12'
         >
           Start Grammar Test
         </button>

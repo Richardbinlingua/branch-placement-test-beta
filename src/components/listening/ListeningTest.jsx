@@ -124,7 +124,7 @@ const ListeningTest = ({
           ))}
         </div>
         <button
-          className='bg-[#4054b2] text-white rounded-md py-3 my-8 w-[300px]'
+          className='bg-[#4054b2] text-white rounded-md py-2 my-8 w-[300px]'
           // onClick={() => {
           //   pause()
           //   setTestState({ listening: false, grammar: true, end: false })

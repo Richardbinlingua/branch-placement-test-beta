@@ -39,13 +39,13 @@ const ListeningExample = ({ setTestState }) => {
 
   return (
     <>
-      <h2 className='text-3xl my-5 text-center'>Listening Placement Test</h2>
+      <h2 className='text-3xl my-7 text-center'>Listening Placement Test</h2>
       <div className='flex flex-col justify-center items-center text-center'>
-        <p className='text-lg font-bold'>
+        <p className='text-lg font-semibold'>
           Listen to the audio. Look at the example on the screen. You will hear
           the example <i>once</i> only.
         </p>
-        <p className='text-lg font-bold'>
+        <p className='text-lg font-semibold'>
           Decide which word you hear, "soap" or "soup"
         </p>
 
@@ -69,12 +69,12 @@ const ListeningExample = ({ setTestState }) => {
             soup
           </button>
         </div>
-        <p className='text-lg font-bold'>
+        <p className='text-lg font-semibold'>
           The correct answer was 'soup', so 'soup' should be selected.
         </p>
         <button
           onClick={stop}
-          className='bg-[#4054b2] text-white rounded-md py-3 my-12 w-[300px]'
+          className='bg-[#4054b2] text-white rounded-md py-2 my-12 w-[300px]'
         >
           Start Test
         </button>
