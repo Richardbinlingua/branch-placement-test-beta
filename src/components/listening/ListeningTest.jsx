@@ -84,6 +84,7 @@ const ListeningTest = ({
   const nextQuestion = () => {
     if (questionIndex >= totalQuestions - 1) {
       soundtrack.current.pause()
+
       setTestState({ grammarExample: true })
     } else {
       setQuestionIndex(questionIndex + 1)

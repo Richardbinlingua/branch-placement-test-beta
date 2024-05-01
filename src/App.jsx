@@ -20,9 +20,24 @@ function App() {
   const [listeningScore, setListeningScore] = useState(0)
   const [grammarScore, setGrammarScore] = useState(0)
 
+  const [student, setStudent] = useState({
+    firstName: '',
+    lastName: '',
+    branch: '',
+    listeningScore: '',
+    grammarScore: '',
+  })
+
   let pageContent
 
-  if (testState.register) pageContent = <Register setTestState={setTestState} />
+  if (testState.register)
+    pageContent = (
+      <Register
+        setTestState={setTestState}
+        student={student}
+        setStudent={setStudent}
+      />
+    )
 
   if (testState.listeningExample)
     pageContent = <ListeningExample setTestState={setTestState} />
@@ -49,7 +64,12 @@ function App() {
     )
   if (testState.end)
     pageContent = (
-      <EndScreen listeningScore={listeningScore} grammarScore={grammarScore} />
+      <EndScreen
+        listeningScore={listeningScore}
+        grammarScore={grammarScore}
+        student={student}
+        setStudent={setStudent}
+      />
     )
 
   return (
