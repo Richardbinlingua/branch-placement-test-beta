@@ -25,9 +25,7 @@ const Register = ({ setTestState, student, setStudent }) => {
 
   return (
     <div>
-      <h1 className='text-3xl my-5 text-center'>
-        inlingua Branch Placement Test
-      </h1>
+      <h1 className='text-3xl my-5 text-center'>inlingua Placement Test</h1>
       <div className='flex justify-center'>
         <form onSubmit={startTest}>
           <label className='block m-2'>
