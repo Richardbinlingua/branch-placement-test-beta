@@ -10,6 +10,8 @@ const ListeningTest = ({
   const [questionIndex, setQuestionIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
 
+  const [submit, setSubmit] = useState(false)
+
   const questions = testData.listeningQuestions ?? []
 
   // console.log(questions[5].correctAnswer)
@@ -35,17 +37,17 @@ const ListeningTest = ({
     }
   }, [isPlaying])
 
-  // const stop = () => {
-  //   soundtrack.current.pause()
-  //   setTestState({
-  //     register: false,
-  //     listeningExample: false,
-  //     listening: false,
-  //     grammarExample: true,
-  //     grammar: false,
-  //     end: false,
-  //   })
-  // }
+  const stop = () => {
+    soundtrack.current.pause()
+    setTestState({
+      register: false,
+      listeningExample: false,
+      listening: false,
+      grammarExample: true,
+      grammar: false,
+      end: false,
+    })
+  }
 
   // const play = () => {
   //   // console.log('play')
@@ -85,13 +87,29 @@ const ListeningTest = ({
     if (questionIndex >= totalQuestions - 1) {
       soundtrack.current.pause()
 
-      setTestState({ grammarExample: true })
+      // setTestState({ grammarExample: true })
+      setSubmit(true)
     } else {
       setQuestionIndex(questionIndex + 1)
     }
   }
 
   // console.log(listeningScore)
+
+  if (submit)
+    return (
+      <>
+        <h2 className='text-3xl my-5 text-center'>Listening Test</h2>
+        <div className='flex flex-col justify-center items-center text-center'>
+          <button
+            onClick={stop}
+            className='bg-[#4054b2] text-white rounded-md py-2 my-8 w-[300px]'
+          >
+            Submit
+          </button>
+        </div>
+      </>
+    )
 
   return (
     <>
@@ -105,6 +123,7 @@ const ListeningTest = ({
         >
           Play
         </button> */}
+        {submit && <button>Submit</button>}
         <p className='text-lg mt-3 mb-5'>
           Question:{' '}
           <span className='text-[#4054b2] font-semibold'>
