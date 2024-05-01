@@ -85,7 +85,7 @@ const ListeningTest = ({
 
   const nextQuestion = () => {
     if (questionIndex >= totalQuestions - 1) {
-      soundtrack.current.pause()
+      // soundtrack.current.pause()
 
       // setTestState({ grammarExample: true })
       setSubmit(true)
@@ -96,20 +96,20 @@ const ListeningTest = ({
 
   // console.log(listeningScore)
 
-  if (submit)
-    return (
-      <>
-        <h2 className='text-3xl my-5 text-center'>Listening Test</h2>
-        <div className='flex flex-col justify-center items-center text-center'>
-          <button
-            onClick={stop}
-            className='bg-[#4054b2] text-white rounded-md py-2 my-8 w-[300px]'
-          >
-            Submit
-          </button>
-        </div>
-      </>
-    )
+  // if (submit)
+  //   return (
+  //     <>
+  //       <h2 className='text-3xl my-5 text-center'>Listening Test</h2>
+  //       <div className='flex flex-col justify-center items-center text-center'>
+  //         <button
+  //           onClick={stop}
+  //           className='bg-[#4054b2] text-white rounded-md py-2 my-8 w-[300px]'
+  //         >
+  //           Submit
+  //         </button>
+  //       </div>
+  //     </>
+  //   )
 
   return (
     <>
@@ -123,7 +123,7 @@ const ListeningTest = ({
         >
           Play
         </button> */}
-        {submit && <button>Submit</button>}
+
         <p className='text-lg mt-3 mb-5'>
           Question:{' '}
           <span className='text-[#4054b2] font-semibold'>
@@ -154,6 +154,14 @@ const ListeningTest = ({
         >
           Submit
         </button> */}
+        {submit && (
+          <button
+            onClick={stop}
+            className='bg-[#4054b2] text-white rounded-md py-2 my-8 w-[300px]'
+          >
+            Submit
+          </button>
+        )}
       </div>
     </>
   )
