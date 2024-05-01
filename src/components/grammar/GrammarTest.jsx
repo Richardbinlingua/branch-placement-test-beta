@@ -20,6 +20,8 @@ const GrammarTest = ({
 
   const [selectedAnswer, setSelectedAnswer] = useState(null)
 
+  const [submit, setSubmit] = useState(true)
+
   const onAnswerSelected = (correct) => {
     if (correct) {
       setGrammarScore(grammarScore + 1)
@@ -36,7 +38,8 @@ const GrammarTest = ({
 
   const nextQuestion = () => {
     if (questionIndex >= totalQuestions - 1) {
-      setTestState({ end: true })
+      setSubmit(true)
+      // setTestState({ end: true })
     } else {
       setQuestionIndex(questionIndex + 1)
     }
@@ -44,6 +47,25 @@ const GrammarTest = ({
   // console.log(totalQuestions)
   // console.log(questionIndex)
   // console.log(grammarScore)
+
+  const stop = () => {
+    setTestState({ end: true })
+  }
+
+  if (submit)
+    return (
+      <>
+        <h2 className='text-3xl my-5 text-center'>Grammar Test</h2>
+        <div className='flex flex-col justify-center items-center text-center'>
+          <button
+            onClick={stop}
+            className='bg-[#4054b2] text-white rounded-md py-2 my-12 w-[300px]'
+          >
+            Submit
+          </button>
+        </div>
+      </>
+    )
 
   return (
     <>
@@ -87,6 +109,14 @@ const GrammarTest = ({
         >
           Submit
         </button> */}
+        {/* {submit && (
+          <button
+            onClick={stop}
+            className='bg-[#4054b2] text-white rounded-md py-2 my-8 w-[300px]'
+          >
+            Submit
+          </button>
+        )} */}
       </div>
     </>
   )

@@ -21,19 +21,19 @@ const GrammarExample = ({ setTestState }) => {
           In warm climates people ______ sitting outside in the sun.
         </h1>
         <button
-          className='border-2 border-[#4054b2] p-3 m-2 w-[300px] rounded-md'
+          className='border-2 border-[#4054b2] p-3 m-1 w-[200px] rounded-md'
           disabled
         >
           likes
         </button>
         <button
-          className='border-2 border-[#4054b2] p-3 m-2 w-[300px] rounded-md bg-blue-400'
+          className='border-2 border-[#4054b2] p-3 m-1 w-[200px] rounded-md bg-blue-400'
           disabled
         >
           like
         </button>
         <button
-          className='border-2 border-[#4054b2] p-3 m-2 w-[300px] rounded-md'
+          className='border-2 border-[#4054b2] p-3 m-1 w-[200px] rounded-md'
           disabled
         >
           are liking
@@ -41,7 +41,7 @@ const GrammarExample = ({ setTestState }) => {
 
         <button
           onClick={onClick}
-          className='bg-[#4054b2] text-white rounded-md py-2 w-[300px] my-8'
+          className='bg-[#4054b2] text-white rounded-md py-2 w-[300px] my-6'
         >
           Start Grammar Test
         </button>
