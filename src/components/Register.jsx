@@ -1,12 +1,18 @@
 import { useState } from 'react'
 
-const Register = ({ setTestState }) => {
+const Register = ({ setTestState, student, setStudent }) => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [branch, setBranch] = useState('')
 
   const startTest = (e) => {
     e.preventDefault()
+    setStudent({
+      ...student,
+      firstName: firstName,
+      lastName: lastName,
+      branch: branch,
+    })
     setTestState({
       register: false,
       listeningExample: true,
@@ -19,7 +25,9 @@ const Register = ({ setTestState }) => {
 
   return (
     <div>
-      <h1 className='text-3xl my-5 text-center'>inlingua Placement Test</h1>
+      <h1 className='text-3xl my-5 text-center'>
+        inlingua Branch Placement Test
+      </h1>
       <div className='flex justify-center'>
         <form onSubmit={startTest}>
           <label className='block m-2'>

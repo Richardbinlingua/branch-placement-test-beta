@@ -1,4 +1,30 @@
-const EndScreen = ({ listeningScore, grammarScore }) => {
+import { useEffect } from 'react'
+import { db } from '../firebase/config'
+import { collection, addDoc } from 'firebase/firestore'
+
+const EndScreen = ({ listeningScore, grammarScore, student, setStudent }) => {
+  const { firstName, lastName, branch } = student
+
+  async function addStudent(student) {
+    try {
+      const docRef = await addDoc(collection(db, 'branch-database'), student)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    addStudent({
+      firstName: firstName,
+      lastName: lastName,
+      branch: branch,
+      listeningScore: listeningScore,
+      grammarScore: grammarScore,
+    })
+  }, [])
+
+  console.log(student)
+
   return (
     <div>
       <div className='text-center mt-10 text-2xl font-semibold'>
