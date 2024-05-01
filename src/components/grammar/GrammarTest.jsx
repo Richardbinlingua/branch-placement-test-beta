@@ -20,7 +20,7 @@ const GrammarTest = ({
 
   const [selectedAnswer, setSelectedAnswer] = useState(null)
 
-  const [submit, setSubmit] = useState(true)
+  const [submit, setSubmit] = useState(false)
 
   const onAnswerSelected = (correct) => {
     if (correct) {
