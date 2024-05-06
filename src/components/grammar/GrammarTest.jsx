@@ -20,7 +20,7 @@ const GrammarTest = ({
 
   const [selectedAnswer, setSelectedAnswer] = useState(null)
 
-  const [submit, setSubmit] = useState(true)
+  const [submit, setSubmit] = useState(false)
 
   const onAnswerSelected = (correct) => {
     if (correct) {
@@ -29,6 +29,7 @@ const GrammarTest = ({
   }
 
   const onAnswerClick = (event) => {
+    // event.target.disabled = true
     const userAnswer = event.target.innerHTML
     setSelectedAnswer(userAnswer)
     const correct = userAnswer === correctAnswer
@@ -77,6 +78,7 @@ const GrammarTest = ({
             {questionNumber} / {totalQuestions}
           </span>
         </p>
+        <p>Score: {grammarScore}</p>
         <h1 className='text-2xl my-6 w-[350px] md:w-1/2 lg:w-1/3'>
           {question}
         </h1>

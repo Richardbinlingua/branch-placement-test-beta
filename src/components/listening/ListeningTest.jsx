@@ -78,6 +78,7 @@ const ListeningTest = ({
   const onAnswerClick = (event) => {
     const userAnswer = event.target.innerHTML
     setSelectedAnswer(userAnswer)
+    event.target.disabled = true
     const correct = userAnswer === correctAnswer
     onAnswerSelected(correct)
     nextQuestion()
@@ -130,6 +131,7 @@ const ListeningTest = ({
             {questionNumber} / {totalQuestions}
           </span>
         </p>
+        <p>Score: {listeningScore}</p>
         <div className='flex'>
           {allAnswers.map((answer) => (
             // return <button>{answer}</button>
