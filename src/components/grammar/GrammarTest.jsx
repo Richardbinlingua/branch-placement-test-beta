@@ -10,8 +10,6 @@ const GrammarTest = ({
 
   const questions = testData.grammarQuestions ?? []
 
-  // console.log(questions[0].question)
-
   const questionNumber = questionIndex + 1
   const totalQuestions = questions.length
 
@@ -39,14 +37,10 @@ const GrammarTest = ({
   const nextQuestion = () => {
     if (questionIndex >= totalQuestions - 1) {
       setSubmit(true)
-      // setTestState({ end: true })
     } else {
       setQuestionIndex(questionIndex + 1)
     }
   }
-  // console.log(totalQuestions)
-  // console.log(questionIndex)
-  // console.log(grammarScore)
 
   const stop = () => {
     setTestState({ end: true })
@@ -82,41 +76,15 @@ const GrammarTest = ({
         </h1>
 
         {allAnswers.map((answer) => (
-          // return <button>{answer}</button>
           <li key={answer} className='list-none text-lg'>
             <button
               onClick={onAnswerClick}
-              // className='mb-4 w-3/4 md:w-1/2 lg:w-1/3 text-lg cursor-pointer hover:bg-slate-300  text-white bg-[#56a5eb] p-3 rounded-md'
               className='border-2 border-[#4054b2] p-3 m-2 w-[300px] rounded-md'
             >
               {answer}
             </button>
           </li>
         ))}
-        {/* <button
-          className='bg-[#4054b2] text-white rounded-md py-2 my-8
-          w-[300px]'
-          onClick={() =>
-            setTestState({
-              register: false,
-              listeningExample: false,
-              listening: false,
-              grammarExample: false,
-              grammar: false,
-              end: true,
-            })
-          }
-        >
-          Submit
-        </button> */}
-        {/* {submit && (
-          <button
-            onClick={stop}
-            className='bg-[#4054b2] text-white rounded-md py-2 my-8 w-[300px]'
-          >
-            Submit
-          </button>
-        )} */}
       </div>
     </>
   )

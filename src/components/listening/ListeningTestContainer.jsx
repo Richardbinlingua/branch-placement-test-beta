@@ -7,7 +7,6 @@ const ListeningTestContainer = ({
   setListeningScore,
 }) => {
   const test = useGetDoc('v1H8NC177RRhUaOZHCE6')
-  // console.log(test)
 
   let contents
   if (test.status === 'loading') {

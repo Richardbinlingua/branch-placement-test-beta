@@ -7,7 +7,6 @@ const GrammarTestContainer = ({
   setGrammarScore,
 }) => {
   const test = useGetDoc('5qEDmzWOr4szjcezKpYV')
-  // console.log(test)
 
   let contents
   if (test.status === 'loading') {

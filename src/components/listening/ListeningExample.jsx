@@ -49,12 +49,6 @@ const ListeningExample = ({ setTestState }) => {
           Decide which word you hear, "soap" or "soup"
         </p>
 
-        {/* <button
-          onClick={play}
-          className='bg-[#4054b2] text-white rounded-md py-3 mt-8 mb-1 w-[150px]'
-        >
-          Play Example
-        </button> */}
         <div className='flex my-5'>
           <button
             className='border-2 border-[#4054b2] p-3 m-2 w-[150px] rounded-md'
