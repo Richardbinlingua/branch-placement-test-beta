@@ -38,7 +38,7 @@ const EndScreen = ({ listeningScore, grammarScore, student, setStudent }) => {
         </h1>
         <h1>
           Your Grammar Score:{' '}
-          <span className='text-[#4054b2] font-bold'>{grammarScore} / 50</span>
+          <span className='text-[#4054b2] font-bold'>{grammarScore} / 100</span>
         </h1>
       </div>
     </div>

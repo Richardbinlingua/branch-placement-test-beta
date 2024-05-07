@@ -22,7 +22,7 @@ const GrammarTest = ({
 
   const onAnswerSelected = (correct) => {
     if (correct) {
-      setGrammarScore(grammarScore + 1)
+      setGrammarScore(grammarScore + 2)
     }
   }
 
